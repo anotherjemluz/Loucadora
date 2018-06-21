@@ -12,7 +12,7 @@
     <title>Locadora</title>
     <meta name="description" content="Um sistema de gestão para locadoras">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
@@ -43,12 +43,12 @@
         </div>
         <h3>cadastro</h3>
 
-        <form className="film-form flex" onSubmit={this.handleSubmit}>
+        <form className="film-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
             <label>
-                <input type="text" value="Título do Filme" onChange={this.handleChange} placeholder="Nome" />
+                <input type="text" name="titulo" value="Título do Filme" onChange={this.handleChange} placeholder="Nome" />
             </label>
             <label>
-                <input type="text" value="Gênero" onChange={this.handleChange} placeholder="seuemail@gmail.com" />
+                <input type="text" name="genero" value="Gênero" onChange={this.handleChange} placeholder="seuemail@gmail.com" />
             </label>
             <label>
                 <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="senha" />

@@ -1,0 +1,87 @@
+body * {
+  margin: 0px;
+  top: 0px; }
+
+body {
+  background-color: #f7f7f7;
+  font-family: Asap;
+  color: #f7f7f7;
+  margin: 0px;
+  text-align: center; }
+
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 26px; }
+
+a {
+  text-decoration: none;
+  color: #f7f7f7; }
+
+@font-face {
+  font-family: Asap;
+  src: url(./font/Asap-Bold.otf);
+  font-weight: 600; }
+@font-face {
+  font-family: Asap;
+  src: url(./font/Asap-Medium.otf);
+  font-weight: 400; }
+@font-face {
+  font-family: Asap;
+  src: url(./font/Asap-Regular.otf);
+  font-weight: 300; }
+@font-face {
+  font-family: Asap;
+  src: url(./font/Asap-Italic.otf);
+  font-weight: italic; }
+.flex {
+  display: flex; }
+
+body header {
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(to left, #61BFD2, #5A6FD6);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+
+body header h1 {
+  padding: 6vh 0vh 0vh 0vh; }
+
+nav {
+  margin: 15vh 15vw; }
+
+a .aluguel-icon, .cliente-icon, .func-icon {
+  width: 15vw;
+  padding: 5vw;
+  border-radius: 5%;
+  background: linear-gradient(to left, #61BFD2, #5A6FD6);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  position: relative; }
+
+.aluguel-icon {
+  margin: 0vh 5vw 0vh 10vw; }
+
+.func-icon {
+  margin: 20vh 0vw 0vh -55vw; }
+
+.films-section {
+  background: linear-gradient(to left, #61BFD2, #5A6FD6);
+  padding: 4vh 0vw 3vh 0vw;
+  border-radius: 24px 24px 0px 0px; }
+
+.films-section h2 {
+  font-style: italic;
+  font-weight: 500; }
+
+.films-section div {
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  flex-direction: column;
+  margin: 3vh 0vw 0vh 15vw; }
+
+.films-section div a {
+  margin: 0vh 0vw 1vh 0vw; }

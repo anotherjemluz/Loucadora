@@ -1,0 +1,17 @@
+<svg id="Trash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #444;
+        fill-rule: evenodd;
+        opacity: 0.6;
+      }
+    </style>
+  </defs>
+  <rect id="rectangle" class="cls-1" width="24" height="24"/>
+  <path id="path" class="cls-2" d="M18,7H6V19a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V7M14.5,3h-5l-1,1H6A1,1,0,0,0,5,5V6H19V5a1,1,0,0,0-1-1H15.5l-1-1"/>
+</svg>

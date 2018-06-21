@@ -2,28 +2,62 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Locadora</title>
-        <meta name="description" content="Um sistema de gestão para locadoras">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="../css/index.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Locadora</title>
+    <meta name="description" content="Um sistema de gestão para locadoras">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <section class="films-section">
+    <section class="cd-films flex">
+        <div class="flex">
+            <svg class="back-arrow" viewBox="0 0 24.176 22.417">
+                <defs>
+                    <style>
+                        .back-arrow-cls-1 {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 4px;
+                        }
+                    </style>
+                </defs>
+                <g id="Group_37" data-name="Group 37" transform="translate(-23.597 -43.932)">
+                    <path id="Path_19" data-name="Path 19" class="back-arrow-cls-1" d="M434.219,45.346l-9.794,9.794,9.794,9.794" transform="translate(-398)"
+                    />
+                    <path id="Path_20" data-name="Path 20" class="back-arrow-cls-1" d="M424.425,62.874h21.348" transform="translate(-398 -7.627)"
+                    />
+                </g>
+            </svg>
             <h2>banco de filmes</h2>
-            <div class="hidden flex">
-                <a href="./WEB-INF/bcadastro.html">cadastro</a>
-                <a href="">atualizar</a>
-            </div>
-        </section>
+        </div>
+        <h3>cadastro</h3>
 
-        <script src="" async defer></script>
-    </body>
+        <form className="film-form flex" onSubmit={this.handleSubmit}>
+            <label>
+                <input type="text" value="Título do Filme" onChange={this.handleChange} placeholder="Nome" />
+            </label>
+            <label>
+                <input type="text" value="Gênero" onChange={this.handleChange} placeholder="seuemail@gmail.com" />
+            </label>
+            <label>
+                <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="senha" />
+            </label>
+            <input type="submit" value="cadastrar filme" />
+        </form>
+    </section>
+
+    <script src="" async defer></script>
+</body>
+
 </html>

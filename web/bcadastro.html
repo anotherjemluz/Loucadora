@@ -22,37 +22,65 @@
 
     <section class="cd-films flex">
         <div class="flex">
-            <svg class="back-arrow" viewBox="0 0 24.176 22.417">
-                <defs>
-                    <style>
-                        .back-arrow-cls-1 {
-                            fill: none;
-                            stroke: #fff;
-                            stroke-width: 4px;
-                        }
-                    </style>
-                </defs>
-                <g id="Group_37" data-name="Group 37" transform="translate(-23.597 -43.932)">
-                    <path id="Path_19" data-name="Path 19" class="back-arrow-cls-1" d="M434.219,45.346l-9.794,9.794,9.794,9.794" transform="translate(-398)"
-                    />
-                    <path id="Path_20" data-name="Path 20" class="back-arrow-cls-1" d="M424.425,62.874h21.348" transform="translate(-398 -7.627)"
-                    />
-                </g>
-            </svg>
+            <a href="index.html">
+                <svg class="back-arrow" viewBox="0 0 24.176 22.417">
+                    <defs>
+                        <style>
+                            .back-arrow-cls-1 {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-width: 4px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Group_37" data-name="Group 37" transform="translate(-23.597 -43.932)">
+                        <path id="Path_19" data-name="Path 19" class="back-arrow-cls-1" d="M434.219,45.346l-9.794,9.794,9.794,9.794" transform="translate(-398)"
+                        />
+                        <path id="Path_20" data-name="Path 20" class="back-arrow-cls-1" d="M424.425,62.874h21.348" transform="translate(-398 -7.627)"
+                        />
+                    </g>
+                </svg>
+            </a>
             <h2>banco de filmes</h2>
         </div>
         <h3>cadastro</h3>
 
-        <form className="film-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
+        <form class="film-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
             <label>
-                <input type="text" name="titulo" value="Título do Filme" onChange={this.handleChange} placeholder="Nome" />
+                <input type="text" name="titulo" value="" placeholder="Título do Filme" />
             </label>
             <label>
-                <input type="text" name="genero" value="Gênero" onChange={this.handleChange} placeholder="seuemail@gmail.com" />
+                <input type="text" name="genero" value="" placeholder="Gênero" />
             </label>
             <label>
-                <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="senha" />
+                <input type="text" name="preco" value="" placeholder="Preço" />
             </label>
+
+            <h4>atores</h4>
+            <label>
+                <input type="text" name="ator1" value="" placeholder="nome do ator" />
+            </label>
+            <label>
+                <input type="text" name="ator2" value="" placeholder="nome do ator" />
+            </label>
+
+            <h4>classificação</h4>
+            <div class="classificacao flex">
+                <input type="radio" name="cc"> L
+                <br>
+                <input type="radio" name="cc"> +10
+                <br>
+                <input type="radio" name="cc"> +12
+                <br>
+                <input type="radio" name="cc"> +14
+                <br>
+                <input type="radio" name="cc"> +16
+                <br>
+                <input type="radio" name="cc"> +18
+                <br>
+            </div>
+
+
             <input type="submit" value="cadastrar filme" />
         </form>
     </section>

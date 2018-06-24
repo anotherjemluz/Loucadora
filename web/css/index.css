@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body * {
   margin: 0px;
   top: 0px; }
@@ -8,7 +7,8 @@ body {
   font-family: Asap;
   color: #f7f7f7;
   margin: 0px;
-  text-align: center; }
+  text-align: center;
+  height: auto; }
 
 h1 {
   font-size: 30px; }
@@ -18,6 +18,9 @@ h2 {
 
 h3 {
   font-size: 26px; }
+
+h4 {
+  font-size: 20px; }
 
 a {
   text-decoration: none;
@@ -98,7 +101,7 @@ a .aluguel-icon, .cliente-icon, .func-icon {
   border-radius: 24px 24px 0px 0px;
   flex-direction: column;
   margin: 5vh 0vw 0vh 0vw;
-  height: 100vh; }
+  height: auto; }
 
 .cd-films h2 {
   font-style: italic;
@@ -118,48 +121,53 @@ a .aluguel-icon, .cliente-icon, .func-icon {
 .cd-films div a {
   margin: 0vh 0vw 1vh 0vw; }
 
-/*configura├º├Áes gerais do formul├írio
- * flex-direction: column -- distribui├º├úo dos elementos na vertical
- */
-.conta-panel {
-  flex-direction: column; }
+.film-form {
+  flex-direction: column;
+  align-items: left;
+  margin: 0vh 0vw 0vh 16vw; }
 
-/*configura├º├Áes dos inputs
- * border: none -- desativa a borda pad├úo
- * background: none -- desativa a decora├º├úo
- * border-bottom: 1px solid $laranja -- define apenas a borda inferior
- * padding: 16px 0px 12px 8px -- espa├ºamento texto-borda e texto-margem lateral do form 
- */
-.conta-panel input[type="text"] {
+.film-form input[type="text"] {
   border: none;
   background: none;
   border-bottom: 1px solid #f7f7f7;
-  padding: 16px 0px 12px 8px;
+  padding: 4vh 0vw 2vh 2vw;
   color: #f7f7f7; }
 
-.conta-panel input[type="text"] {
-  color: #f7f7f7; }
+.film-form input[type="text"]::placeholder {
+  color: #f7f7f7;
+  opacity: 0.6; }
 
-/*configura├º├Áes dos inputs quando selecionados
- * outline: none -- desativa o a borda azul
- */
 .film-form input[type="text"]:focus {
   outline: none; }
 
-/*configura├º├Áes do bot├úo
- * margin: 32px auto -- espa├ºo entre o botao de login e o input de senha e alinhamento central autom├ítico POR ALGUM MOTIVO N T├ü FUNCIONANDO
- * background: none -- remove a decora├º├úo padrao do botao
- * padding: 8px 0px 8px 0px -- espa├ºo interno, apenas top e bottom
- * width: 160px -- largura do bot├úo
- */
+.film-form input[name="genero"], .film-form input[name="preco"] {
+  width: 24vw; }
+
+.film-form input[name="preco"] {
+  margin: 0vh 0vw 0vh 0vw; }
+
+.film-form h4 {
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  margin: 5vh 0vw 0vh 0vw; }
+
+.film-form div {
+  flex-direction: row;
+  margin: 12px 0px 12px 0px;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500; }
+
 .film-form input[type="submit"] {
-  margin: 12px auto 0px auto;
-  background: none;
+  margin: 12px 40px 12px 0px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  background: #f7f7f7;
   border: 2px solid #f7f7f7;
   border-radius: 30px;
-  padding: 8px 0px 8px 0px;
-  width: 160px;
-  font-size: 20px;
-  font-weight: semibold;
-  text-transform: uppercase;
-  color: #f7f7f7; }
+  padding: 8px 16px 8px 16px;
+  width: 180px;
+  font-size: 6vw;
+  font-weight: 500;
+  align-self: center;
+  color: #5A6FD6; }

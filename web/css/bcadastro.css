@@ -12,7 +12,7 @@ Error: Undefined variable: "$azulzinho".
 9:     border-radius: 24px 24px 0px 0px
 10:     flex-direction: column
 11:     margin: 5vh 0vw 0vh 0vw
-12:     height: 100vh
+12:     height: auto
 
 Backtrace:
 web/sass/bcadastro.sass:7
@@ -74,4 +74,4 @@ C:/RailsInstaller/Ruby2.2.0/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 7 of web/sass/bcadastro.sass\A \A 2:     width: 5vw\A 3:     height: 5vw\A 4:     margin: 1vh 5vw 0vh 0vw\A 5: \A 6: .cd-films\A 7:     background: linear-gradient(to left, $azulzinho, $azulzao)\A 8:     padding: 4vh 0vw 3vh 0vw\A 9:     border-radius: 24px 24px 0px 0px\A 10:     flex-direction: column\A 11:     margin: 5vh 0vw 0vh 0vw\A 12:     height: 100vh"; }
+  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 7 of web/sass/bcadastro.sass\A \A 2:     width: 5vw\A 3:     height: 5vw\A 4:     margin: 1vh 5vw 0vh 0vw\A 5: \A 6: .cd-films\A 7:     background: linear-gradient(to left, $azulzinho, $azulzao)\A 8:     padding: 4vh 0vw 3vh 0vw\A 9:     border-radius: 24px 24px 0px 0px\A 10:     flex-direction: column\A 11:     margin: 5vh 0vw 0vh 0vw\A 12:     height: auto"; }

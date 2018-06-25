@@ -23,6 +23,7 @@
   "homepage": "https://github.com/jemluz/locadora#readme",
   "dependencies": {
     "gulp-ruby-sass": "^3.0.0",
-    "gulp-watch": "^5.0.0"
+    "gulp-watch": "^5.0.0",
+    "jquery": "^3.3.1"
   }
 }

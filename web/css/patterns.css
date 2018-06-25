@@ -22,6 +22,12 @@ h3 {
 h4 {
   font-size: 20px; }
 
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
 a {
   text-decoration: none;
   color: #f7f7f7; }

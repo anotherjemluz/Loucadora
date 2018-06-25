@@ -5,8 +5,8 @@ Error: Undefined variable: "$azulzinho".
 1: header
 2:     width: 100vw
 3:     height: 20vh
-4:     background: linear-gradient(to left, $azulzinho, $azulzao)
-5:     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.2)
+4:     background: linear-gradient(to top, $azulzinho, $azulzao)
+5:     box-shadow: 5px 5px 3px hsla(0, 0%, 0%, 0.1)
 6: 
 7: header h1
 8:     padding: 6vh 0vh 0vh 0vh
@@ -72,4 +72,4 @@ C:/RailsInstaller/Ruby2.2.0/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 4 of web/sass/home.sass\A \A 1: header\A 2:     width: 100vw\A 3:     height: 20vh\A 4:     background: linear-gradient(to left, $azulzinho, $azulzao)\A 5:     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.2)\A 6: \A 7: header h1\A 8:     padding: 6vh 0vh 0vh 0vh\A 9: "; }
+  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 4 of web/sass/home.sass\A \A 1: header\A 2:     width: 100vw\A 3:     height: 20vh\A 4:     background: linear-gradient(to top, $azulzinho, $azulzao)\A 5:     box-shadow: 5px 5px 3px hsla(0, 0%, 0%, 0.1)\A 6: \A 7: header h1\A 8:     padding: 6vh 0vh 0vh 0vh\A 9: "; }

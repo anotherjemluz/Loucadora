@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author conta
  */
-public class CadastrarFilmeServlet extends HttpServlet {
+public class BancoBuscarServelet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,13 +29,11 @@ public class CadastrarFilmeServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String acadastrofilme = request.getParameter("acadastrofilme");
-        String acadastrocliente = request.getParameter("acadastrocliente");
-        String acadastrofuncionario = request.getParameter("acadastrofuncionario");
-        String acadastrop1 = request.getParameter("acadastrop1");
-        String acadastrop2 = request.getParameter("acadastrop2");
+        String bsearchcpf = request.getParameter("bsearchcpf");
+        String bsearchcliente = request.getParameter("bsearchcliente");
         //chama o DAO
-        response.sendRedirect("aluguel.html");
+        response.sendRedirect("bresults.html");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

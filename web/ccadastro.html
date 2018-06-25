@@ -73,15 +73,15 @@
             <h3>cadastrar</h3>
         </div>
 
-        <form class="aluguel-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
+        <form class="aluguel-form flex" onSubmit={this.handleSubmit} action="ClienteCadastroServlet">
             <label>
-                <input type="text" class="width-dynamic proba dva" name="titulo" value="" placeholder="Nome completo" />
+                <input type="text" class="width-dynamic proba dva" name="ccadastronome" value="" placeholder="Nome completo" />
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="cliente" value="" placeholder="CPF" />
+                <input type="text" class="width-dynamic proba dva" name="ccadastrocpf" value="" placeholder="CPF" />
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="funcionario" value="" placeholder="Data de nascimento" />
+                <input type="text" class="width-dynamic proba dva" name="ccadastronascimento" value="" placeholder="Data de nascimento" />
             </label>
 
             <input type="submit" value="cadastrar cliente" />

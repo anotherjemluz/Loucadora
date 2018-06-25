@@ -48,41 +48,40 @@
         </div>
         <h3>cadastro</h3>
 
-        <form class="film-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
+        <form class="film-form flex" onSubmit={this.handleSubmit} action="BancoCadastroServlet">
             <label>
-                <input type="text" class="width-dynamic proba dva" name="titulo" value="" placeholder="Título do Filme" />
+                <input type="text" class="width-dynamic proba dva" name="bcadastrotitulo" value="" placeholder="Título do Filme" />
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="genero" value="" placeholder="Gênero" />
+                <input type="text" class="width-dynamic proba dva" name="bcadastrogenero" value="" placeholder="Gênero" />
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="preco" value="" placeholder="Preço" />
+                <input type="text" class="width-dynamic proba dva" name="bcadastropreco" value="" placeholder="Preço" />
             </label>
 
             <h4>atores</h4>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="ator1" value="" placeholder="nome do ator" />
+                <input type="text" class="width-dynamic proba dva" name="bcadastroa1" value="" placeholder="nome do ator" />
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="ator2" value="" placeholder="nome do ator" />
+                <input type="text" class="width-dynamic proba dva" name="bcadastroa2" value="" placeholder="nome do ator" />
             </label>
 
             <h4>classificação</h4>
             <div class="classificacao flex">
-                <input type="radio" name="cc"> L
+                <input type="radio" name="bcadastrocc"> L
                 <br>
-                <input type="radio" name="cc"> +10
+                <input type="radio" name="bcadastrocc"> +10
                 <br>
-                <input type="radio" name="cc"> +12
+                <input type="radio" name="bcadastrocc"> +12
                 <br>
-                <input type="radio" name="cc"> +14
+                <input type="radio" name="bcadastrocc"> +14
                 <br>
-                <input type="radio" name="cc"> +16
+                <input type="radio" name="bcadastrocc"> +16
                 <br>
-                <input type="radio" name="cc"> +18
+                <input type="radio" name="bcadastrocc"> +18
                 <br>
             </div>
-
 
             <input type="submit" value="cadastrar filme" />
         </form>

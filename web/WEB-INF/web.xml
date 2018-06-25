@@ -2,7 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>CadastrarFilmeServlet</servlet-name>
-        <servlet-class>servlets.CadastrarFilmeServlet</servlet-class>
+        <servlet-class>servlets.BancoCadastroServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ListarFilmeServlet</servlet-name>
@@ -10,11 +10,31 @@
     </servlet>
     <servlet>
         <servlet-name>AluguelDAOServelet</servlet-name>
-        <servlet-class>servlets.AluguelDAOServelet</servlet-class>
+        <servlet-class>servlets.AluguelLoginServelet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BuscarAluguel</servlet-name>
-        <servlet-class>servlets.BuscarAluguelServelet</servlet-class>
+        <servlet-class>servlets.AluguelBuscarServelet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BancoBuscarServelet</servlet-name>
+        <servlet-class>servlets.BancoBuscarServelet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClienteCadastroServelet</servlet-name>
+        <servlet-class>servlets.ClienteCadastroServelet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClienteBuscarServelet</servlet-name>
+        <servlet-class>servlets.ClienteBuscarServelet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FuncionarioCadastroServlet</servlet-name>
+        <servlet-class>servlets.FuncionarioCadastroServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FuncionarioBuscarFilmeServlet</servlet-name>
+        <servlet-class>servlets.FuncionarioBuscarFilmeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarFilmeServlet</servlet-name>
@@ -31,6 +51,26 @@
     <servlet-mapping>
         <servlet-name>BuscarAluguel</servlet-name>
         <url-pattern>/BuscarAluguel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BancoBuscarServelet</servlet-name>
+        <url-pattern>/BancoBuscarServelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteCadastroServelet</servlet-name>
+        <url-pattern>/ClienteCadastroServelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteBuscarServelet</servlet-name>
+        <url-pattern>/ClienteBuscarServelet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FuncionarioCadastroServlet</servlet-name>
+        <url-pattern>/FuncionarioCadastroServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FuncionarioBuscarFilmeServlet</servlet-name>
+        <url-pattern>/FuncionarioBuscarFilmeServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

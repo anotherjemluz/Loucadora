@@ -11,13 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import locadora.AluguelDAO;
 
 /**
  *
  * @author conta
  */
-public class AluguelDAOServelet extends HttpServlet {
+public class FuncionarioBuscarFilmeServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,10 +29,10 @@ public class AluguelDAOServelet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String allogincpf = request.getParameter("allogincpf");
-        String alloginpass = request.getParameter("alloginpass");
-        //chama o dao
-        response.sendRedirect("acadastro.html");
+        String fsearchcpf = request.getParameter("fsearchcpf");
+        String fsearchnome = request.getParameter("fsearchnome");
+        //chama o DAO
+        response.sendRedirect("fresults.html");
         }
     }
 

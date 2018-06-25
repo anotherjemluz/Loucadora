@@ -482,7 +482,7 @@ li .tag-data {
 
 .lg-aluguel h3 {
   font-weight: 400;
-  margin: 0vh 0vw 0vh -35vw; }
+  margin: 0vh 0vw 0vh -42vw; }
 
 .lg-aluguel div {
   font-size: 20px;
@@ -491,7 +491,7 @@ li .tag-data {
 .lg-aluguel a {
   font-size: 22px;
   align-self: left;
-  margin: 0vh 0vw 2vh 15vw; }
+  margin: 0vh 0vw 2vh 12vw; }
 
 .lga-form {
   width: 80vw;
@@ -567,7 +567,7 @@ li .tag-data {
 
 .sc-aluguel h3 {
   font-weight: 400;
-  margin: 0vh 0vw 0vh -35vw; }
+  margin: 2vh 0vw 0vh -42vw; }
 
 .sc-aluguel div {
   font-size: 20px;
@@ -576,7 +576,7 @@ li .tag-data {
 .sc-aluguel a {
   font-size: 22px;
   align-self: left;
-  margin: 0vh 0vw 2vh 15vw; }
+  margin: 0vh 0vw 2vh 12vw; }
 
 .sc-form {
   width: 80vw;
@@ -631,5 +631,88 @@ li .tag-data {
   width: 140px;
   font-size: 6vw;
   font-weight: 600;
+  align-self: center;
+  color: #61BFD2; }
+
+.cd-aluguel .back-arrow {
+  width: 5vw;
+  height: 5vw;
+  margin: 1vh 5vw 0vh 10vw; }
+
+.cd-aluguel {
+  padding: 0vh 0vw 3vh 0vw;
+  border-radius: 24px 24px 0px 0px;
+  flex-direction: column;
+  margin: 0vh 0vw 0vh 0vw;
+  height: auto;
+  min-height: 100vh; }
+
+.cd-aluguel h2 {
+  font-weight: 600;
+  margin: -1vh 0vw 0vh 0vw; }
+
+.cd-aluguel h3 {
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  margin: 5vh 0vw 0vh 11vw; }
+
+.cd-aluguel div {
+  font-size: 20px;
+  flex-direction: row; }
+
+.cd-aluguel div a {
+  margin: 0vh 0vw 1vh 0vw; }
+
+.aluguel-form {
+  flex-direction: column;
+  align-items: left;
+  margin: 0vh 0vw 0vh 16vw; }
+
+.aluguel-form input[type="text"] {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #61BFD2;
+  padding: 4vh 0vw 2vh 2vw;
+  color: #61BFD2; }
+
+.aluguel-form input[type="text"]::placeholder {
+  color: #4D5580;
+  opacity: 0.4;
+  font-weight: 600; }
+
+.aluguel-form input[type="text"]:focus {
+  outline: none; }
+
+.aluguel-form input[name="genero"], .film-form input[name="preco"] {
+  width: 24vw; }
+
+.aluguel-form input[name="preco"] {
+  margin: 0vh 0vw 0vh 0vw; }
+
+.aluguel-form h4 {
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  margin: 5vh 0vw 0vh 0vw;
+  color: #61BFD2; }
+
+.aluguel-form div {
+  flex-direction: row;
+  margin: 12px 0px 12px 0px;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500; }
+
+.aluguel-form input[type="submit"] {
+  margin: 24px 40px 12px 0px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  background: #f7f7f7;
+  border: 2px solid #61BFD2;
+  border-radius: 30px;
+  padding: 8px 16px 8px 16px;
+  width: 180px;
+  font-size: 6vw;
+  font-weight: 500;
   align-self: center;
   color: #61BFD2; }

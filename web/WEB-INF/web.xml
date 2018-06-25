@@ -8,6 +8,10 @@
         <servlet-name>ListarFilmeServlet</servlet-name>
         <servlet-class>servlets.ListarFilmeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AluguelDAOServelet</servlet-name>
+        <servlet-class>servlets.AluguelDAOServelet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarFilmeServlet</servlet-name>
         <url-pattern>/CadastrarFilmeServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ListarFilmeServlet</servlet-name>
         <url-pattern>/ListarFilmeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AluguelDAOServelet</servlet-name>
+        <url-pattern>/AluguelDAOServelet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

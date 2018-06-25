@@ -127,13 +127,13 @@
             <h3>cadastrar</h3>
         </div>
 
-        <form class="lga-form  flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
+        <form class="lga-form  flex" onSubmit={this.handleSubmit} action="AluguelDAOServlet">
             <h4>login</h4>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="cpf" value="" placeholder="CPF" />
+                <input type="text" class="width-dynamic proba dva" name="allogincpf" value="" placeholder="CPF" />
             </label>
             <label>
-                <input type="password" class="width-dynamic proba dva" name="senha" value="" placeholder="senha" />
+                <input type="password" class="width-dynamic proba dva" name="alloginpass" value="" placeholder="senha" />
             </label>
 
             <input type="submit" value="entrar" />

@@ -2,17 +2,17 @@
 Error: Undefined variable: "$azulzinho".
         on line 39 of web/sass/acadastro.sass
 
-34:     margin: 0vh 0vw 0vh 16vw
+34:     margin: 0vh 0vw 0vh 0vw
 35: 
 36: .aluguel-form input[type="text"]
 37:     border: none
 38:     background: none
-39:     border-bottom: 1px solid $azulzinho
-40:     padding: 4vh 0vw 2vh 2vw
-41:     color: $azulzinho
-42: 
-43: .aluguel-form input[type="text"]::placeholder 
-44:     color: $cinza
+39:     border-bottom: 2px solid $azulzinho
+40:     padding: 4vh 3vw 2vh 3vw
+41:     color: #666
+42:     font-size: 16px
+43:     font-weight: 600
+44:     text-align: center
 
 Backtrace:
 web/sass/acadastro.sass:39
@@ -70,4 +70,4 @@ C:/RailsInstaller/Ruby2.2.0/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 39 of web/sass/acadastro.sass\A \A 34:     margin: 0vh 0vw 0vh 16vw\A 35: \A 36: .aluguel-form input[type=\"text\"]\A 37:     border: none\A 38:     background: none\A 39:     border-bottom: 1px solid $azulzinho\A 40:     padding: 4vh 0vw 2vh 2vw\A 41:     color: $azulzinho\A 42: \A 43: .aluguel-form input[type=\"text\"]::placeholder \A 44:     color: $cinza"; }
+  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 39 of web/sass/acadastro.sass\A \A 34:     margin: 0vh 0vw 0vh 0vw\A 35: \A 36: .aluguel-form input[type=\"text\"]\A 37:     border: none\A 38:     background: none\A 39:     border-bottom: 2px solid $azulzinho\A 40:     padding: 4vh 3vw 2vh 3vw\A 41:     color: #666\A 42:     font-size: 16px\A 43:     font-weight: 600\A 44:     text-align: center"; }

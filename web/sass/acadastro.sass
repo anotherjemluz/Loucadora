@@ -30,15 +30,18 @@
 
 .aluguel-form
     flex-direction: column
-    align-items: left
-    margin: 0vh 0vw 0vh 16vw
+    align-items: center
+    margin: 0vh 0vw 0vh 0vw
 
 .aluguel-form input[type="text"]
     border: none
     background: none
-    border-bottom: 1px solid $azulzinho
-    padding: 4vh 0vw 2vh 2vw
-    color: $azulzinho
+    border-bottom: 2px solid $azulzinho
+    padding: 4vh 3vw 2vh 3vw
+    color: #666
+    font-size: 16px
+    font-weight: 600
+    text-align: center
 
 .aluguel-form input[type="text"]::placeholder 
     color: $cinza
@@ -47,12 +50,7 @@
 
 .aluguel-form input[type="text"]:focus
     outline: none
-
-.aluguel-form input[name="genero"], .film-form input[name="preco"]
-    width: 24vw
-
-.aluguel-form input[name="preco"]
-    margin: 0vh 0vw 0vh 0vw
+    text-shadow: 3px 5px 6px hsla(0, 0%, 0%, 0.1)
 
 .aluguel-form h4
     font-style: italic
@@ -69,7 +67,7 @@
     font-weight: 500
 
 .aluguel-form input[type="submit"] 
-    margin: 24px 40px 12px 0px
+    margin: 24px auto 12px auto
     box-shadow: 0px 2px 3px hsla(0, 0%, 0%, 0.2)
     background: $branco 
     border: 2px solid $azulzinho
@@ -78,6 +76,5 @@
     width: 180px 
     font-size: 6vw
     font-weight: 500
-    align-self: center
     color: $azulzinho
     

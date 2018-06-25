@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$azulzinho".
-        on line 12 of web/sass/aluguel.sass
+        on line 22 of web/sass/aluguel.sass
 
-7:     width: 10vw
-8:     height: 10vh
-9:     margin: -3vh 8vw 0vh 3vw
-10: 
-11: .hm-aluguel
-12:     background: linear-gradient(to top, $azulzinho, $azulzao)
-13:     padding: 4vh 0vw 3vh 0vw
-14:     flex-direction: column
-15:     margin: 0vh 0vw 0vh 0vw
-16:     height: auto
-17:     min-height: 100vh
+17:     width: 10vw
+18:     height: 10vh
+19:     margin: -3vh 8vw 0vh 3vw
+20: 
+21: .hm-aluguel
+22:     background: linear-gradient(to top, $azulzinho, $azulzao)
+23:     padding: 4vh 0vw 3vh 0vw
+24:     flex-direction: column
+25:     margin: 0vh 0vw 0vh 0vw
+26:     height: auto
+27:     min-height: 100vh
 
 Backtrace:
-web/sass/aluguel.sass:12
+web/sass/aluguel.sass:22
 C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/script/tree/node.rb:50:in `perform'
 C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/script/tree/funcall.rb:186:in `perform_arg'
@@ -74,4 +74,4 @@ C:/RailsInstaller/Ruby2.2.0/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 12 of web/sass/aluguel.sass\A \A 7:     width: 10vw\A 8:     height: 10vh\A 9:     margin: -3vh 8vw 0vh 3vw\A 10: \A 11: .hm-aluguel\A 12:     background: linear-gradient(to top, $azulzinho, $azulzao)\A 13:     padding: 4vh 0vw 3vh 0vw\A 14:     flex-direction: column\A 15:     margin: 0vh 0vw 0vh 0vw\A 16:     height: auto\A 17:     min-height: 100vh"; }
+  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 22 of web/sass/aluguel.sass\A \A 17:     width: 10vw\A 18:     height: 10vh\A 19:     margin: -3vh 8vw 0vh 3vw\A 20: \A 21: .hm-aluguel\A 22:     background: linear-gradient(to top, $azulzinho, $azulzao)\A 23:     padding: 4vh 0vw 3vh 0vw\A 24:     flex-direction: column\A 25:     margin: 0vh 0vw 0vh 0vw\A 26:     height: auto\A 27:     min-height: 100vh"; }

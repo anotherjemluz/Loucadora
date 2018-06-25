@@ -13,6 +13,8 @@
     <meta name="description" content="Um sistema de gestão para locadoras">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript" src="functions.js" rel="script"></script>
     <meta name="theme-color" content="#5A6FD6">
 </head>
 
@@ -48,21 +50,21 @@
 
         <form class="film-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
             <label>
-                <input type="text" name="titulo" value="" placeholder="Título do Filme" />
+                <input type="text" class="width-dynamic proba dva" name="titulo" value="" placeholder="Título do Filme" />
             </label>
             <label>
-                <input type="text" name="genero" value="" placeholder="Gênero" />
+                <input type="text" class="width-dynamic proba dva" name="genero" value="" placeholder="Gênero" />
             </label>
             <label>
-                <input type="text" name="preco" value="" placeholder="Preço" />
+                <input type="text" class="width-dynamic proba dva" name="preco" value="" placeholder="Preço" />
             </label>
 
             <h4>atores</h4>
             <label>
-                <input type="text" name="ator1" value="" placeholder="nome do ator" />
+                <input type="text" class="width-dynamic proba dva" name="ator1" value="" placeholder="nome do ator" />
             </label>
             <label>
-                <input type="text" name="ator2" value="" placeholder="nome do ator" />
+                <input type="text" class="width-dynamic proba dva" name="ator2" value="" placeholder="nome do ator" />
             </label>
 
             <h4>classificação</h4>

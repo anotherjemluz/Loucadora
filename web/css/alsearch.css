@@ -11,8 +11,8 @@ Error: Undefined variable: "$azulzinho".
 9:     padding: 4vh 0vw 4vh 0vw
 10:     width: 100vw
 11:     box-shadow: 0px 3px 3px hsla(0, 0%, 0%, 0.1)
-12: 
-13: .sc-aluguel h2
+12:     margin: 0px
+13: 
 
 Backtrace:
 web/sass/alsearch.sass:8
@@ -74,4 +74,4 @@ C:/RailsInstaller/Ruby2.2.0/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 8 of web/sass/alsearch.sass\A \A 3:     margin: 0vh 0vw 0vh 0vw\A 4:     height: 100vh\A 5:     border-radius: none\A 6: \A 7: .model-header\A 8:     background: linear-gradient(to top, $azulzinho, $azulzao)\A 9:     padding: 4vh 0vw 4vh 0vw\A 10:     width: 100vw\A 11:     box-shadow: 0px 3px 3px hsla(0, 0%, 0%, 0.1)\A 12: \A 13: .sc-aluguel h2"; }
+  content: "Error: Undefined variable: \"$azulzinho\".\A         on line 8 of web/sass/alsearch.sass\A \A 3:     margin: 0vh 0vw 0vh 0vw\A 4:     height: 100vh\A 5:     border-radius: none\A 6: \A 7: .model-header\A 8:     background: linear-gradient(to top, $azulzinho, $azulzao)\A 9:     padding: 4vh 0vw 4vh 0vw\A 10:     width: 100vw\A 11:     box-shadow: 0px 3px 3px hsla(0, 0%, 0%, 0.1)\A 12:     margin: 0px\A 13: "; }

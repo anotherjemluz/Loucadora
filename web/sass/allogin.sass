@@ -9,6 +9,7 @@
     padding: 4vh 0vw 4vh 0vw
     width: 100vw
     box-shadow: 0px 3px 3px hsla(0, 0%, 0%, 0.1)
+    margin: 0px
 
 .lg-aluguel h2
     font-weight: 600
@@ -36,24 +37,24 @@
     border: 2px solid $azulzinho
     border-radius: 15px
 
-.lga-form input[type="text"]
+.lga-form input[type="text"], .lga-form input[type="password"]
     border: none
     background: none
     border-bottom: 1px solid $azulzinho
-    padding: 4vh 0vw 2vh 8vw
-    color: $azulzinho
+    padding: 4vh 3vw 2vh 3vw
+    color: #666
+    font-weight: 600
+    font-size: 16px
     margin: 0vh 0vw 0vh 8vw
 
-.lga-form input[type="text"]::placeholder 
+.lga-form input[type="text"]::placeholder, , .lga-form input[type="password"]:placeholder
     color: $cinza
     font-weight: 600
     opacity: 0.4
 
-.lga-form input[type="text"]:focus
+.lga-form input[type="text"]:focus, .lga-form input[type="password"]:focus
     outline: none
-
-.lga-form input[name="cpf"], .lga-form input[name="senha"]
-    width: 54vw
+    text-shadow: 3px 5px 6px hsla(0, 0%, 0%, 0.1)
 
 .lga-form h4
     font-weight: 600

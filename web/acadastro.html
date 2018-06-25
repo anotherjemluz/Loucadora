@@ -13,6 +13,8 @@
     <meta name="description" content="Um sistema de gestão para locadoras">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/index.css">
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript" src="functions.js" rel="script"></script>
     <meta name="theme-color" content="#5A6FD6">
 </head>
 
@@ -24,7 +26,7 @@
     <section class="cd-aluguel flex">
         <div class="model-header">
             <div class="al-header flex">
-                <a href="index.html">
+                <a href="aluguel.html">
                     <svg class="back-arrow" viewBox="0 0 24.176 22.417">
                         <defs>
                             <style>
@@ -127,21 +129,21 @@
 
         <form class="aluguel-form flex" onSubmit={this.handleSubmit} action="CadastrarFilmeServlet">
             <label>
-                <input type="text" name="titulo" value="" placeholder="Título do Filme" />
+                <input type="text" class="width-dynamic proba dva"  name="titulo" value="" placeholder="Título do Filme" />
             </label>
             <label>
-                <input type="text" name="cliente" value="" placeholder="Cliente" />
+                <input type="text" class="width-dynamic proba dva"  name="cliente" value="" placeholder="Cliente" />
             </label>
             <label>
-                <input type="text" name="funcionario" value="" placeholder="Funcionario" />
+                <input type="text" class="width-dynamic proba dva"  name="funcionario" value="" placeholder="Funcionario" />
             </label>
 
             <h4>prazos</h4>
             <label>
-                <input type="text" name="ator1" value="" placeholder="data de locação" />
+                <input type="text" class="width-dynamic proba dva" name="ator1" value="" placeholder="data de locação" />
             </label>
             <label>
-                <input type="text" name="ator2" value="" placeholder="data de entrega" />
+                <input type="text" class="width-dynamic proba dva" name="ator2" value="" placeholder="data de entrega" />
             </label>
 
             <input type="submit" value="cadastrar filme" />

@@ -36,7 +36,7 @@ public class BancoResultsServlet extends HttpServlet {
         String bresultscc = request.getParameter("bresultscc");      
         
         // atualizar filme
-        Filme f = new Filme(id, bresultstitulo, bresultsgenero, bresultspreco);
+        Filme f = new Filme(id, bresultstitulo, bresultscc, bresultsgenero, bresultspreco);
         FilmeDAO fd = new FilmeDAO();
         fd.atualizar();
 

@@ -29,12 +29,17 @@ public class AluguelResultsServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Boolean aresultspago = request.getParameter("aresultspago");
+        String aresultspago = request.getParameter("aresultspago");
         String aresultsfilme = request.getParameter("aresultsfilme");
         String aresultscliente = request.getParameter("aresultscliente");
         String aresultsdata1 = request.getParameter("aresultsdata1");
-        String aresultsdata2 = request.getParameter("aresultsdata2");     
-        Int aresultsid = request.getParameter("aresultsid"); 
+        String aresultsdata2 = request.getParameter("aresultsdata2");    
+
+        // buscar cliente
+
+        Cliente c = new Cliente();
+        ClienteDAO cd = new ClienteDAO();
+        c = cd.getClientesByCPF();    
         
         // atualizar aluguel
 

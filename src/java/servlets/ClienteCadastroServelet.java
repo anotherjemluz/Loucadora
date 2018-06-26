@@ -34,15 +34,11 @@ public class ClienteCadastroServelet extends HttpServlet {
         String ccadastronascimento = request.getParameter("ccadastronascimento");
         String ccadastroddd = request.getParameter("ccadastroddd");
         String ccadastrotel = request.getParameter("ccadastrotel");
-<<<<<<< HEAD       
 
-=======
-
-		Cliente c = new Cliente(ccadastronome, ccadastrocpf, ccadastronascimento, ccadastroddd, ccadastrotel);
+	Cliente c = new Cliente(ccadastronome, ccadastrocpf, ccadastronascimento, ccadastroddd, ccadastrotel);
         ClienteDAO cd = new ClienteDAO();
         cd.inserir(c);
 
->>>>>>> d5988b2644466166410e9e3d480de7e2412552f4
         response.sendRedirect("cliente.html");
         }
     }

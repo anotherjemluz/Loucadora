@@ -1,0 +1,172 @@
+.rt-aluguel .back-arrow
+    width: 5vw
+    height: 5vw
+    margin: 1vh 5vw 0vh 10vw
+    
+.rt-aluguel
+    padding: 0vh 0vw 0vh 0vw
+    border-radius: 24px 24px 0px 0px
+    flex-direction: column
+    margin: 0vh 0vw 0vh 0vw
+    top: 0px
+    height: auto
+    min-height: 100vh
+
+.rt-aluguel h2
+    font-style: italic
+    font-weight: 500
+
+.rt-aluguel h3
+    font-style: italic
+    font-weight: 500
+    text-align: left
+    margin: 5vh 0vw 0vh 12vw
+
+.rt-aluguel div
+    font-size: 20px
+    flex-direction: row
+    
+.rt-aluguel div a
+    margin: 0vh 0vw 1vh 0vw
+
+.al-results
+    flex-direction: column
+    align-items: center
+    width: 100vw
+    color: $azulzao
+
+.al-results h4
+    margin: 5vh 0vw 0vh 0vw
+
+.al-results h6
+    opacity: 0.6
+    margin: 0vh 0vw 5vh 0vw
+
+.al-results input[type="text"]
+    padding: 8px 0vw 0vh 0vw
+    background: none
+    border: none
+    color: $azulzao
+    font-weight: 600
+
+.al-results input[type="text"]::placeholder
+    color: $azulzao
+
+.al-results input[type="text"]:focus
+    outline: none
+    text-shadow: 3px 5px 6px hsla(0, 0%, 0%, 0.1)
+
+.tag-date input[type="text"]
+    padding: 8px 0vw 0vh 0vw
+    width: 80px
+
+.al-results li
+    list-style: none
+    width: 80vw
+    padding: 0vh 0vw 0vh 0vw
+    margin: 0px 0px 15px 0px
+    border-bottom: 1px solid $azulzao
+
+.al-item
+    flex-direction: column
+    align-items: left
+    margin: 0vh 0vw 0vh 0vw
+
+.al-tag h5
+    opacity: 0.6
+    font-weight: 400
+    margin: 0vh 25vw 2vh 0vw
+    width: 110px
+
+li .al-tag
+    margin-left: 0px
+
+li .tag-datal
+    flex-direction: row
+    height: 15px
+    margin: 0vh 0vw 2vh 0vw
+
+.tag-datal h5
+    opacity: 0.8
+    text-transform: uppercase
+    margin: 0vh 4vw 2vh 0vw
+
+.al-results p
+    margin: 0vh 0vw 0vh 2vw
+    font-size: 16px
+    font-weight: 600
+    opacity: 0.8
+
+.al-item .delete-icon-cls-2
+    width: 25px 
+    fill: $cinza
+    margin: -5vh 0vw 5vh 65vw
+
+.hidden
+    display: none
+
+.check
+    cursor: pointer
+    position: relative
+    margin: -1px 0vw 0vh 0vw
+    width: 18px
+    height: 18px
+    -webkit-tap-highlight-color: transparent
+    transform: translate3d(0,0,0)
+    svg
+        position: relative
+        z-index: 1
+        fill: none
+        stroke-linecap: round
+        stroke-linejoin: round
+        stroke: $azulzao
+        stroke-width: 1.5
+        transform: translate3d(0,0,0)
+        transition: all .2s ease
+    path
+        stroke-dasharray: 60
+        stroke-dashoffset: 0
+    polyline 
+        stroke-dasharray: 22
+        stroke-dashoffset: 66
+    &:hover 
+        &:before
+            opacity: 1
+        svg
+            stroke: #4285F4
+
+#cbx1:checked + .check, #cbx2:checked + .check, #cbx3:checked + .check
+    svg
+        stroke: #4285F4
+        path
+            stroke-dashoffset: 60
+            transition: all .3s linear
+        polyline
+            stroke-dashoffset: 42
+            transition: all .2s linear
+            transition-delay: .15s
+
+#cbx9:checked + .check, #cbx2:checked + .check, #cbx3:checked + .check
+    svg
+        stroke:  $azulzinho
+        path
+            stroke-dashoffset: 60
+            transition: all .3s linear
+        polyline
+            stroke-dashoffset: 42
+            transition: all .2s linear
+            transition-delay: .15s
+
+.rt-aluguel input[type="submit"] 
+    margin: 12px 0px 12px 20px
+    box-shadow: 0px 2px 3px hsla(0, 0%, 0%, 0.2)
+    background: $azulzao
+    border: 2px solid $azulzao 
+    border-radius: 30px 
+    padding: 8px 16px 8px 16px 
+    width: 180px 
+    font-size: 6vw
+    font-weight: 500
+    align-self: center
+    color: $branco
+

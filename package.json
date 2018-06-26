@@ -1,0 +1,29 @@
+{
+  "name": "locadora",
+  "version": "1.0.0",
+  "description": "Sistema de locadora com java",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jemluz/locadora.git"
+  },
+  "keywords": [
+    "locadora",
+    "java",
+    "sistem"
+  ],
+  "author": "Rosilene Moura e Jemima Luz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jemluz/locadora/issues"
+  },
+  "homepage": "https://github.com/jemluz/locadora#readme",
+  "dependencies": {
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "jquery": "^3.3.1"
+  }
+}

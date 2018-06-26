@@ -27,7 +27,7 @@
 
 .films-results
     flex-direction: column
-    align-items: left
+    align-items: center
     width: 100vw
 
 .films-results h4
@@ -158,3 +158,20 @@ li .tag-data
     align-self: center
     color: #5E9FD4
 
+.films-results input[type="text"]
+    padding: 8px 0vw 0vh 0vw
+    background: none
+    border: none
+    color: $azulzao
+    font-weight: 600
+
+.films-results input[type="text"]::placeholder
+    color: $branco
+
+.films-results input[type="text"]:focus
+    outline: none
+    text-shadow: 3px 5px 6px hsla(0, 0%, 0%, 0.1)
+
+.films-results input[type="text"]
+    padding: 8px 0vw 0vh 0vw
+    width: 80px

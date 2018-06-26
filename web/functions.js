@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    $(".film-item").click(function(){
-        var display = $(this).children('.tag-data').css('display');
+    $(".film-tag").click(function(){
+        var display = $(this).siblings('.tag-data').css('display');
         if (display == 'none')
-            $(this).children(".tag-data, .tag-ator, .delete-icon").css("display", "flex");
+            $(this).siblings(".tag-data, .delete-icon, input").css("display", "flex");
         else if (display == 'flex')
-            $(this).children(".tag-data, .tag-ator, .delete-icon").css("display", "none");
+            $(this).siblings(".tag-data, .delete-icon, input").css("display", "none");
     });
 
     $(".al-tag").click(function(){

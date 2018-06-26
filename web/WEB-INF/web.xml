@@ -36,6 +36,14 @@
         <servlet-name>AluguelResultsServlet</servlet-name>
         <servlet-class>servlets.AluguelResultsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BancoResultsServlet</servlet-name>
+        <servlet-class>servlets.BancoResultsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClienteResultsServlet</servlet-name>
+        <servlet-class>servlets.ClienteResultsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarFilmeServlet</servlet-name>
         <url-pattern>/CadastrarFilmeServlet</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>AluguelResultsServlet</servlet-name>
         <url-pattern>/AluguelResultsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BancoResultsServlet</servlet-name>
+        <url-pattern>/BancoResultsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteResultsServlet</servlet-name>
+        <url-pattern>/ClienteResultsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

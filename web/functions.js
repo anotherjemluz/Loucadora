@@ -10,9 +10,9 @@ $(document).ready(function(){
     $(".al-tag").click(function(){
         var display = $(this).siblings('.tag-datal').css('display');
         if (display == 'none')
-            $(this).siblings(".tag-datal, .delete-icon").css("display", "flex");
+            $(this).siblings(".tag-datal, .delete-icon, input").css("display", "flex");
         else if (display == 'flex')
-            $(this).siblings(".tag-datal, .delete-icon").css("display", "none");
+            $(this).siblings(".tag-datal, .delete-icon, input").css("display", "none");
     });
 
     $.fn.textWidth = function(text, font) {

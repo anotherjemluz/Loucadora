@@ -32,6 +32,10 @@
         <servlet-name>FuncionarioBuscarFilmeServlet</servlet-name>
         <servlet-class>servlets.FuncionarioBuscarFilmeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AluguelResultsServlet</servlet-name>
+        <servlet-class>servlets.AluguelResultsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarFilmeServlet</servlet-name>
         <url-pattern>/CadastrarFilmeServlet</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>FuncionarioBuscarFilmeServlet</servlet-name>
         <url-pattern>/FuncionarioBuscarFilmeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AluguelResultsServlet</servlet-name>
+        <url-pattern>/AluguelResultsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

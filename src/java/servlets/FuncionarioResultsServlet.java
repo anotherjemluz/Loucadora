@@ -33,6 +33,8 @@ public class FuncionarioResultsServlet extends HttpServlet {
         String fresultspass = request.getParameter("fresultspass");
         String fresultscpf = request.getParameter("fresultscpf");   
         String fresultsnascimento = request.getParameter("fresultsnascimento");
+        String fcadastroddd = request.getParameter("fcadastroddd");
+        String fcadastrotel = request.getParameter("fcadastrotel");
         //atualizar funcionario
 
         Funcionario f = new Funcionario(nome, fresultscpf, fresultsnascimento, gerente, fresultspass, ddd, numero);

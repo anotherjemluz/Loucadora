@@ -36,7 +36,7 @@ public class ClienteResultsServlet extends HttpServlet {
         String ccadastrotel = request.getParameter("ccadastrotel");
         
         // atualizar cliente
-        Cliente c = new Cliente(cresultsnome, cresultscpf, cresultsnascimento);
+        Cliente c = new Cliente(cresultsnome, cresultscpf, cresultsnascimento, ccadastroddd, ccadastrotel);
         ClienteDAO cd = new ClienteDAO();
         cd.atualizar(c);
 

@@ -34,6 +34,7 @@ public class FuncionarioCadastroServlet extends HttpServlet {
         String fcadastronascimento = request.getParameter("fcadastronascimento");
         String fcadastropass = request.getParameter("fcadastropass");
         String fcadastrogerente = request.getParameter("fcadastrogerente");
+        String fcadastroddd = request.getParameter("fcadastroddd");
         String fcadastrotel = request.getParameter("fcadastrotel");
         //chama o DAO
         response.sendRedirect("func.html");

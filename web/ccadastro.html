@@ -75,16 +75,19 @@
 
         <form class="aluguel-form flex" onSubmit={this.handleSubmit} action="ClienteCadastroServlet">
             <label>
-                <input type="text" class="width-dynamic proba dva" name="ccadastronome" value="" placeholder="Nome completo" />
+                <input type="text" class="width-dynamic proba dva" name="ccadastronome" value="" placeholder="Nome completo" required/>
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="ccadastrocpf" value="" placeholder="CPF" />
+                <input type="text" class="width-dynamic proba dva" name="ccadastrocpf" value="" placeholder="CPF" required/>
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="ccadastronascimento" value="" placeholder="Data de nascimento" />
+                <input type="text" class="width-dynamic proba dva" name="ccadastronascimento" value="" placeholder="Data de nascimento" required/>
+            </label>
+            <label>
+                <input type="text" class="width-dynamic proba dva" name="ccadastrotel" value="" placeholder="(ddd)telefone" required/>
             </label>
 
-            <input type="submit" value="cadastrar cliente" />
+            <input type="submit" value="cadastrar cliente" required/>
         </form>
     </section>
 

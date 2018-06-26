@@ -93,17 +93,21 @@
 
         <form class="aluguel-form flex" onSubmit={this.handleSubmit} action="FuncionarioCadastroServlet">
             <label>
-                <input type="text" class="width-dynamic proba dva" name="fcadastronome" value="" placeholder="Nome" />
+                <input type="text" class="width-dynamic proba dva" name="fcadastronome" value="" placeholder="Nome" required/>
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="fcadastrocpf" value="" placeholder="CPF" />
+                <input type="text" class="width-dynamic proba dva" name="fcadastrocpf" value="" placeholder="CPF" required/>
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="fcadastronascimento" value="" placeholder="Data de nascimento" />
+                <input type="text" class="width-dynamic proba dva" name="fcadastronascimento" value="" placeholder="Data de nascimento" required/>
             </label>
             <label>
-                <input type="text" class="width-dynamic proba dva" name="fcadastropass" value="" placeholder="senha" />
+                <input type="text" class="width-dynamic proba dva" name="fcadastropass" value="" placeholder="senha" required/>
             </label>
+            <label>
+                <input type="text" class="width-dynamic proba dva" name="fcadastrotel" value="" placeholder="(ddd)telefone" required/>
+            </label>
+
 
             <h4 style="font-style: normal; font-weight: 600; color: #5A6FD6">gerente</h4>
             <input id="cbx9" type="checkbox" name="fcadastrogerente" style="display: none;">

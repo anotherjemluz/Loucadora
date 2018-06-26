@@ -34,7 +34,7 @@ public class AluguelResultsServlet extends HttpServlet {
         String aresultscliente = request.getParameter("aresultscliente");
         String aresultsdata1 = request.getParameter("aresultsdata1");
         String aresultsdata2 = request.getParameter("aresultsdata2");     
-        Int aresultsid = request.getParameter("aresultsid"); 
+        Int aresultsid = request.getParameter("aresultsid");  
         
         // atualizar aluguel
 

@@ -31,7 +31,7 @@
 
 .al-results
     flex-direction: column
-    align-items: left
+    align-items: center
     width: 100vw
     color: $azulzao
 
@@ -41,6 +41,24 @@
 .al-results h6
     opacity: 0.6
     margin: 0vh 0vw 5vh 0vw
+
+.al-results input[type="text"]
+    padding: 8px 0vw 0vh 0vw
+    background: none
+    border: none
+    color: $azulzao
+    font-weight: 600
+
+.al-results input[type="text"]::placeholder
+    color: $azulzao
+
+.al-results input[type="text"]:focus
+    outline: none
+    text-shadow: 3px 5px 6px hsla(0, 0%, 0%, 0.1)
+
+.tag-date input[type="text"]
+    padding: 8px 0vw 0vh 0vw
+    width: 80px
 
 .al-results li
     list-style: none

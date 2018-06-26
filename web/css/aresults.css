@@ -5,7 +5,7 @@ Error: Undefined variable: "$azulzao".
 31: 
 32: .al-results
 33:     flex-direction: column
-34:     align-items: left
+34:     align-items: center
 35:     width: 100vw
 36:     color: $azulzao
 37: 
@@ -66,4 +66,4 @@ C:/RailsInstaller/Ruby2.2.0/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$azulzao\".\A         on line 36 of web/sass/aresults.sass\A \A 31: \A 32: .al-results\A 33:     flex-direction: column\A 34:     align-items: left\A 35:     width: 100vw\A 36:     color: $azulzao\A 37: \A 38: .al-results h4\A 39:     margin: 5vh 0vw 0vh 0vw\A 40: \A 41: .al-results h6"; }
+  content: "Error: Undefined variable: \"$azulzao\".\A         on line 36 of web/sass/aresults.sass\A \A 31: \A 32: .al-results\A 33:     flex-direction: column\A 34:     align-items: center\A 35:     width: 100vw\A 36:     color: $azulzao\A 37: \A 38: .al-results h4\A 39:     margin: 5vh 0vw 0vh 0vw\A 40: \A 41: .al-results h6"; }

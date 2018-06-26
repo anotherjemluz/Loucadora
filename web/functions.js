@@ -7,12 +7,12 @@ $(document).ready(function(){
             $(this).children(".tag-data, .tag-ator, .delete-icon").css("display", "none");
     });
 
-    $(".al-item").click(function(){
-        var display = $(this).children('.tag-datal').css('display');
+    $(".al-tag").click(function(){
+        var display = $(this).siblings('.tag-datal').css('display');
         if (display == 'none')
-            $(this).children(".tag-datal, .delete-icon").css("display", "flex");
+            $(this).siblings(".tag-datal, .delete-icon").css("display", "flex");
         else if (display == 'flex')
-            $(this).children(".tag-datal, .delete-icon").css("display", "none");
+            $(this).siblings(".tag-datal, .delete-icon").css("display", "none");
     });
 
     $.fn.textWidth = function(text, font) {

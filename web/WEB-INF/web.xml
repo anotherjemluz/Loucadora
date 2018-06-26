@@ -44,6 +44,10 @@
         <servlet-name>ClienteResultsServlet</servlet-name>
         <servlet-class>servlets.ClienteResultsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FuncionarioResultsServlet</servlet-name>
+        <servlet-class>servlets.FuncionarioResultsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarFilmeServlet</servlet-name>
         <url-pattern>/CadastrarFilmeServlet</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>ClienteResultsServlet</servlet-name>
         <url-pattern>/ClienteResultsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FuncionarioResultsServlet</servlet-name>
+        <url-pattern>/FuncionarioResultsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -29,8 +29,7 @@ public class BancoBuscarServelet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String bsearchcpf = request.getParameter("bsearchcpf");
-        String bsearchcliente = request.getParameter("bsearchcliente");
+        String bsearchnome = request.getParameter("bsearchnome");
         //chama funcionario
         
         response.sendRedirect("bresults.html");

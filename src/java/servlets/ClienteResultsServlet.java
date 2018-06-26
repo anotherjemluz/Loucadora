@@ -32,6 +32,8 @@ public class ClienteResultsServlet extends HttpServlet {
         String cresultsnome = request.getParameter("cresultsnome");
         String cresultscpf = request.getParameter("cresultscpf");
         String cresultsnascimento = request.getParameter("cresultsnascimento");   
+        String ccadastroddd = request.getParameter("ccadastroddd");
+        String ccadastrotel = request.getParameter("ccadastrotel");
         
         // atualizar cliente
         Cliente c = new Cliente(cresultsnome, cresultscpf, cresultsnascimento);

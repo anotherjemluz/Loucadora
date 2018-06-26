@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AluguelDAO implements AluguelDAOInterface {
+public class AluguelDAO implements AluguelDAOInterface, Incremento {
 
 	Conexao c = new Conexao();
 
@@ -133,11 +133,13 @@ public class AluguelDAO implements AluguelDAOInterface {
 	public List<Aluguel> getAluguelByIdCliente(String idCliente) {
 
 		List<Aluguel> resultado = new ArrayList<Aluguel>();
-
+	
 		try {
 			if (Conexao.getConexao().isClosed()) {
 				c = new Conexao();
 			}
+			
+			Aluguel item;
 
 			PreparedStatement preparedStatement = Conexao.getConexao().prepareStatement(
 					"SELECT id, data_locacao, data_devolucao, id_funcionario, id_cliente, filme_devolvido FROM aluguel WHERE id_cliente = ?");
@@ -145,9 +147,10 @@ public class AluguelDAO implements AluguelDAOInterface {
 
 			ResultSet resultSet = preparedStatement.executeQuery();
 
+			
 			while (resultSet.next()) {
 
-				Aluguel item = new Aluguel();
+				item = new Aluguel();
 
 				item.setId(resultSet.getInt("id"));
 				item.setDataDeLocacao(resultSet.getString("data_locacao"));
@@ -159,13 +162,16 @@ public class AluguelDAO implements AluguelDAOInterface {
 				resultado.add(item);
 
 			}
-
+	
 			resultSet.close();
 			preparedStatement.close();
 			Conexao.getConexao().close();
+			
+			//return resultado;
 		} catch (SQLException ex) {
 			return null;
 		}
+	
 
 		return resultado;
 	}

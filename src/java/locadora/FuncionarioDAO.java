@@ -43,7 +43,7 @@ public class FuncionarioDAO implements FuncionarioDAOInterface {
 
 	@Override
 	public Funcionario getFuncionarioByCPF(String valor) {
-		Funcionario resultado = null;
+		Funcionario resultado = new Funcionario();
 
 		// aqui é pesquisa pelo valor = CPF
 
@@ -82,6 +82,7 @@ public class FuncionarioDAO implements FuncionarioDAOInterface {
 	// aqui é a busca pelo nome
 	@Override
 	public List<Funcionario> getFuncionarioByNome(String nome) {
+
 		if (nome == null || nome.trim().length() == 0) {
 			nome = "%";
 		} else {
@@ -89,10 +90,11 @@ public class FuncionarioDAO implements FuncionarioDAOInterface {
 		}
 
 		List<Funcionario> resultado = new ArrayList<Funcionario>();
-		AluguelDAO aluguel = new AluguelDAO();
 		Funcionario item;
+		AluguelDAO aluguel = new AluguelDAO();
 
 		try {
+
 			if (Conexao.getConexao().isClosed()) {
 				c = new Conexao();
 			}
@@ -117,13 +119,15 @@ public class FuncionarioDAO implements FuncionarioDAOInterface {
 				item.setAlugueis(aluguel.getAluguelByIdFuncionario(item.getCPF()));
 
 				resultado.add(item);
+
 			}
 
 			resultSet.close();
 			preparedStatement.close();
 			Conexao.getConexao().close();
+
 		} catch (SQLException ex) {
-			return null;
+			System.out.println(ex);
 		}
 		return resultado;
 	}

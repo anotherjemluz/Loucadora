@@ -41,7 +41,7 @@ public class ClienteDAO implements ClienteDAOInterface {
 
 	@Override
 	public Cliente getClientesByCPF(String valor) {
-		Cliente resultado = null;
+		Cliente resultado = new Cliente();
 
 		// aqui é pesquisa pelo valor = CPF
 
@@ -54,10 +54,14 @@ public class ClienteDAO implements ClienteDAOInterface {
 			PreparedStatement preparedStatement = Conexao.getConexao()
 					.prepareStatement("SELECT nome, cpf, data_nascimento, ddd, numero FROM cliente WHERE cpf = ?");
 			preparedStatement.setString(1, valor);
+			
 			ResultSet resultSet = preparedStatement.executeQuery();
+			
+			//System.out.println(resultSet);
 
 			while (resultSet.next()) {
 				resultado = new Cliente();
+				
 				resultado.setNome(resultSet.getString("nome"));
 				resultado.setCPF(resultSet.getString("cpf"));
 				resultado.setDataDeNascimento(resultSet.getString("data_nascimento"));
@@ -70,9 +74,12 @@ public class ClienteDAO implements ClienteDAOInterface {
 			Conexao.getConexao().close();
 
 			AluguelDAO aluguel = new AluguelDAO();
+			
 			resultado.setAlugueis(aluguel.getAluguelByIdCliente(resultado.getCPF()));
-		} catch (SQLException ex) {
-			System.out.println(ex);
+					
+		} catch (Exception ex) {
+
+	
 		}
 
 		return resultado;
@@ -99,7 +106,7 @@ public class ClienteDAO implements ClienteDAOInterface {
 			}
 
 			PreparedStatement preparedStatement = Conexao.getConexao().prepareStatement(
-					"SELECT nome, cpf, data_nascimento FROM cliente WHERE upper(nome) LIKE upper(?)");
+					"SELECT nome, cpf, data_nascimento, ddd, numero FROM cliente WHERE upper(nome) LIKE upper(?)");
 			preparedStatement.setString(1, nome);
 
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -142,7 +149,7 @@ public class ClienteDAO implements ClienteDAOInterface {
 			}
 
 			PreparedStatement preparedStatement = Conexao.getConexao()
-					.prepareStatement("UPDATE clientes SET nome = ?, data_nascimento = ?, ddd = ?, numero = ? WHERE cpf = ?");
+					.prepareStatement("UPDATE cliente SET nome = ?, data_nascimento = ?, ddd = ?, numero = ? WHERE cpf = ?");
 
 			preparedStatement.setString(1, cliente.getNome());
 			preparedStatement.setString(2, cliente.getDataDeNascimento());

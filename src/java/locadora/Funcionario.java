@@ -16,9 +16,9 @@ public class Funcionario extends Pessoa {
 	public Funcionario() {
 	}
 
-	public Funcionario(String nome, String CPF, String dataDeNascimento, boolean gerente, String senha, int ddd,
+	public Funcionario(String nome, String cpf, String dataDeNascimento, boolean gerente, String senha, int ddd,
 			int numero) {
-		super(nome, CPF, dataDeNascimento, ddd, numero);
+		super(nome, cpf, dataDeNascimento, ddd, numero);
 		this.gerente = gerente;
 		this.senha = senha;
 	}
@@ -33,10 +33,6 @@ public class Funcionario extends Pessoa {
 
 	public void setGerente(boolean gerente) {
 		this.gerente = gerente;
-	}
-
-	public List<Aluguel> getAlugueis() {
-		return alugueis;
 	}
 
 	public void setAlugueis(List<Aluguel> alugueis) {

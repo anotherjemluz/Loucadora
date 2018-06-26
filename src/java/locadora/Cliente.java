@@ -13,8 +13,9 @@ public class Cliente extends Pessoa {
 	public Cliente() {
 	}
 
-	public Cliente(String nome, String CPF, String dataDeNascimento, int ddd, int numero) {
-		super(nome, CPF, dataDeNascimento, ddd, numero);
+	public Cliente(String nome, String cpf, String dataDeNascimento, int ddd, int numero) {
+		super(nome, cpf, dataDeNascimento, ddd, numero);
+		this.alugueis = null;
 	}
 
 	public void setAlugueis(List<Aluguel> alugueis) {

@@ -8,10 +8,10 @@ public class Filme implements Serializable {
 	// só é possível alugar 3 filmes por cliente
 	
 	private int id;
-	private String titulo;
-	private String genero;
-	private String classificacao;
-	private double preco;
+	public String titulo;
+	public String genero;
+	public String classificacao;
+	public double preco;
 	private int aluguelId; // chave estrangeira para id do aluguel
 	
 	public Filme() {}
@@ -31,38 +31,6 @@ public class Filme implements Serializable {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-	
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-
-	public String getClassificacao() {
-		return classificacao;
-	}
-
-	public void setClassificacao(String classificacao) {
-		this.classificacao = classificacao;
-	}
-
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
 	}
 	
 	public int getAluguelId() {

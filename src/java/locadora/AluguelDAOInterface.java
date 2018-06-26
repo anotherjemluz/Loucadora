@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface AluguelDAOInterface {
 
-	int incrementoID();
+	//int incrementoID();
 
 	boolean inserir(Aluguel aluguel);
 
@@ -15,5 +15,5 @@ public interface AluguelDAOInterface {
 	List<Aluguel> getAluguelByIdCliente(String idCliente);
 
 	List<Aluguel> getAluguelByIdFuncionario(String idFuncionario);
-
+	
 }

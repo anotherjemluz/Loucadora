@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilmeDAO implements FilmeDAOInterface{
+public class FilmeDAO implements FilmeDAOInterface, Incremento {
 
 	Conexao c = new Conexao();
 
@@ -50,11 +50,11 @@ public class FilmeDAO implements FilmeDAOInterface{
 					"INSERT INTO filmes (id, titulo, classificacao, genero, preco, aluguel_id) VALUES (?, ?, ?, ?, ?, ?);");
 			
 			preparedStatement.setInt(1, filme.getId());
-			preparedStatement.setString(2, filme.getTitulo());
-			preparedStatement.setString(3, filme.getClassificacao());
-			preparedStatement.setString(4, filme.getGenero());
-			preparedStatement.setDouble(5, filme.getPreco());
-			preparedStatement.setInt(5, filme.getAluguelId());
+			preparedStatement.setString(2, filme.titulo);
+			preparedStatement.setString(3, filme.classificacao);
+			preparedStatement.setString(4, filme.genero);
+			preparedStatement.setDouble(5, filme.preco);
+			preparedStatement.setInt(6, filme.getAluguelId());
 			
 			resultado = (preparedStatement.executeUpdate() == 1);
 			
@@ -79,10 +79,10 @@ public class FilmeDAO implements FilmeDAOInterface{
 			PreparedStatement preparedStatement = Conexao.getConexao().prepareStatement(
 					"UPDATE filmes SET titulo = ?, classificacao = ?, genero = ?, preco = ? aluguel_id = ? WHERE id = ?");
 
-			preparedStatement.setString(1, filme.getTitulo());
-			preparedStatement.setString(2, filme.getClassificacao());
-			preparedStatement.setString(3, filme.getGenero());
-			preparedStatement.setDouble(4, filme.getPreco());
+			preparedStatement.setString(1, filme.titulo);
+			preparedStatement.setString(2, filme.classificacao);
+			preparedStatement.setString(3, filme.genero);
+			preparedStatement.setDouble(4, filme.preco);
 			preparedStatement.setInt(5, filme.getAluguelId());
 			preparedStatement.setInt(6, filme.getId());
 
@@ -120,10 +120,9 @@ public class FilmeDAO implements FilmeDAOInterface{
 		return resultado;
 	}
 
-	// Essa busca é a que vai auxiliar na atualização. Eu procuro pelo nome, armazena em uma Lista, depois eu tenho todos
-	// os dados do filme, daí é só passar por parâmetro
 	@Override
-	public List<Filme> getFilmeByNome(String titulo) {
+	public List<Filme> getFilmeByTitulo(String titulo)  {
+
 		if (titulo == null || titulo.trim().length() == 0) {
 			titulo = "%";
 		} else {
@@ -131,40 +130,50 @@ public class FilmeDAO implements FilmeDAOInterface{
 		}
 
 		List<Filme> resultado = new ArrayList<Filme>();
+		Filme item;
+		//AluguelDAO aluguel = new AluguelDAO();
 
 		try {
+
+			if (Conexao.getConexao().isClosed()) {
+				c = new Conexao();
+			}
+
 			PreparedStatement preparedStatement = Conexao.getConexao().prepareStatement(
 					"SELECT id, titulo, classificacao, genero, preco, aluguel_id FROM filmes WHERE upper(titulo) LIKE upper(?)");
 			preparedStatement.setString(1, titulo);
+
 			ResultSet resultSet = preparedStatement.executeQuery();
 
 			while (resultSet.next()) {
-				
-				Filme item = new Filme();
+
+				item = new Filme();
+
 				item.setId(resultSet.getInt("id"));
-				item.setTitulo(resultSet.getString("titulo"));
-				item.setClassificacao(resultSet.getString("classificacao"));
-				item.setGenero(resultSet.getString("genero"));
-				item.setPreco(resultSet.getDouble("preco"));
+				item.titulo = (resultSet.getString("titulo"));
+				item.classificacao = (resultSet.getString("classificacao"));
+				item.genero = (resultSet.getString("genero"));
+				item.preco = (resultSet.getDouble("preco"));
 				item.setAluguelId(resultSet.getInt("aluguel_id"));
-				
+
 				resultado.add(item);
+
 			}
 
 			resultSet.close();
 			preparedStatement.close();
 			Conexao.getConexao().close();
-		} catch (SQLException ex) {
-			return null;
-		}
 
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		}
 		return resultado;
 	}
 	
 	@Override
 	public Filme[] getFilmePorAluguelId(int AluguelId) {
 		Filme[] resultado = new Filme[3];
-		Filme item = null;
+		Filme item = new Filme();
 		
 		int i = 0;
 
@@ -180,10 +189,10 @@ public class FilmeDAO implements FilmeDAOInterface{
 				item = new Filme();
 				
 				item.setId(resultSet.getInt("id"));
-				item.setTitulo(resultSet.getString("titulo"));
-				item.setClassificacao(resultSet.getString("classificacao"));
-				item.setGenero(resultSet.getString("genero"));
-				item.setPreco(resultSet.getDouble("preco"));
+				item.titulo = (resultSet.getString("titulo"));
+				item.classificacao = (resultSet.getString("classificacao"));
+				item.genero = (resultSet.getString("genero"));
+				item.preco = (resultSet.getDouble("preco"));
 				item.setAluguelId(resultSet.getInt("aluguel_id"));
 				
 				//resultado.add(item);
@@ -204,7 +213,7 @@ public class FilmeDAO implements FilmeDAOInterface{
 
 	@Override
 	public Filme getFilmePorId(int id) {
-		Filme resultado = null;
+		Filme resultado = new Filme();
 
 		try {
 			if(Conexao.getConexao().isClosed()) {c = new Conexao();}
@@ -216,11 +225,12 @@ public class FilmeDAO implements FilmeDAOInterface{
 
 			while (resultSet.next()) {
 				resultado = new Filme();
+				
 				resultado.setId(resultSet.getInt("id"));
-				resultado.setTitulo(resultSet.getString("titulo"));
-				resultado.setClassificacao(resultSet.getString("classificacao"));
-				resultado.setGenero(resultSet.getString("genero"));
-				resultado.setPreco(resultSet.getDouble("preco"));
+				resultado.titulo = (resultSet.getString("titulo"));
+				resultado.classificacao = (resultSet.getString("classificacao"));
+				resultado.genero = (resultSet.getString("genero"));
+				resultado.preco = (resultSet.getDouble("preco"));
 				resultado.setAluguelId(resultSet.getInt("aluguel_id"));
 			}
 

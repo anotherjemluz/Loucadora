@@ -1,20 +1,18 @@
 package locadora;
 
-import java.io.Serializable;
+public class Pessoa extends Telefone {
 
-public class Pessoa extends Telefone implements Serializable {
-
+	private String cpf;
 	private String nome;
-	private String CPF;
 	private String dataDeNascimento;
 
 	public Pessoa() {
 	}
 
-	public Pessoa(String nome, String CPF, String dataDeNascimento, int ddd, int numero) {
+	public Pessoa(String nome, String cpf, String dataDeNascimento, int ddd, int numero) {
 		super(ddd, numero);
 		this.nome = nome;
-		this.CPF = CPF;
+		this.cpf = cpf;
 		this.dataDeNascimento = dataDeNascimento;
 	}
 
@@ -27,11 +25,11 @@ public class Pessoa extends Telefone implements Serializable {
 	}
 
 	public String getCPF() {
-		return CPF;
+		return cpf;
 	}
 
 	public void setCPF(String CPF) {
-		this.CPF = CPF;
+		this.cpf = CPF;
 	}
 
 	public String getDataDeNascimento() {

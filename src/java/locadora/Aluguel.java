@@ -7,13 +7,14 @@ import java.util.List;
 public class Aluguel implements Serializable {
 
 	private int id;
-	protected String dataDeLocacao;
-	protected String dataDeDevolucao;
 	private String idFuncionario;
 	private String idCliente;
 	// private List<Filme> filmes = new ArrayList<>(); // um aluguel tem vários
 	// filmes, mas um filme são tem um aluguel
 	private Filme[] filmes = new Filme[3];
+	
+	protected String dataDeLocacao;
+	protected String dataDeDevolucao;
 	protected boolean filmeDevolvido;
 
 	public Aluguel() {

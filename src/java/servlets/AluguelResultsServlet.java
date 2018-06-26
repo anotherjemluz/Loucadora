@@ -33,8 +33,10 @@ public class AluguelResultsServlet extends HttpServlet {
         String aresultsfilme = request.getParameter("aresultsfilme");
         String aresultscliente = request.getParameter("aresultscliente");
         String aresultsdata1 = request.getParameter("aresultsdata1");
+        String aresultsdata2 = request.getParameter("aresultsdata2");     
+        Int aresultsid = request.getParameter("aresultsid");  
 <<<<<<< HEAD
-        String aresultsdata2 = request.getParameter("aresultsdata2");    
+            
 
         // buscar cliente
 
@@ -42,8 +44,7 @@ public class AluguelResultsServlet extends HttpServlet {
         ClienteDAO cd = new ClienteDAO();
         c = cd.getClientesByCPF();    
 =======
-        String aresultsdata2 = request.getParameter("aresultsdata2");     
-        Int aresultsid = request.getParameter("aresultsid");  
+        
 >>>>>>> 31aa459d577879009a4fe9e71241fd2dec719b0f
         
         // atualizar aluguel

@@ -31,12 +31,14 @@ public class BancoBuscarServelet extends HttpServlet {
             throws ServletException, IOException {
 <<<<<<< HEAD
         String bsearchnome = request.getParameter("bsearchnome");
-        //chama funcionario
-=======
-        String bsearchcpf = request.getParameter("bsearchcpf");
-        String bsearchcliente = request.getParameter("bsearchcliente");
 
-        // buscar filme alugado pelo cliente
+        // buscar filme por titulo
+
+        FilmeDAO fd = FilmeDAO();
+        List<Filme> f = ArrayList<Filme>();
+
+        f = fd.getFilmeByTitulo(bsearchnome);
+
 >>>>>>> dd99696ca56d3bd61357143749404245da34b66a
         
         response.sendRedirect("bresults.html");

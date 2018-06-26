@@ -32,7 +32,12 @@ public class ClienteResultsServlet extends HttpServlet {
         String cresultsnome = request.getParameter("cresultsnome");
         String cresultscpf = request.getParameter("cresultscpf");
         String cresultsnascimento = request.getParameter("cresultsnascimento");   
-        //chama o DAO
+        
+        // atualizar cliente
+        Cliente c = new Cliente(cresultsnome, cresultscpf, cresultsnascimento);
+        ClienteDAO cd = new ClienteDAO();
+        cd.atualizar(c);
+
         response.sendRedirect("cliente.html");
         }
     }

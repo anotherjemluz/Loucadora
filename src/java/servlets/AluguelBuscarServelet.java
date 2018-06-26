@@ -31,7 +31,21 @@ public class AluguelBuscarServelet extends HttpServlet {
             throws ServletException, IOException {
         String alsearchcpf = request.getParameter("alsearchcpf");
         String alsearchcliente = request.getParameter("alsearchcliente");
-        //chamar o DAO
+        
+        // executa busca de alugueis pelo cliente
+
+        List<Aluguel> a = new ArrayList<Aluguel()>;
+        AlugueDAO ad = new AlugueDAO();
+
+        if(alsearchcpf != null) {
+            a = ad.getAluguelByIdCliente(alsearchcpf);
+        } else if(alsearchcliente != null) {
+            List<CLiente> c = new Arraylist<CLiente>();
+            ClienteDAO cd = new ClienteDAO();
+            c = cd.getClientesByNome(alsearchcliente);
+            // c.alugueis possui os alugueis dos usuarios. 
+        }
+
         response.sendRedirect("aresults.html");
         }
     }

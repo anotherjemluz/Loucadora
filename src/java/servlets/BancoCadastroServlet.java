@@ -34,7 +34,15 @@ public class BancoCadastroServlet extends HttpServlet {
         String bcadastropreco = request.getParameter("bcadastropreco");
         String bcadastroa1 = request.getParameter("bcadastroa1");
         String bcadastroa2 = request.getParameter("bcadastroa2");
-        //chama o DAO
+        
+        // cadastro de filme
+
+
+        FilmeDAO fd = new FilmeDAO();
+        Filme f = new Filme(fd.incrementoID(), bcadastrotitulo, bcadastrogenero, bcadastropreco);
+        
+        fd.inserir(f);
+
         response.sendRedirect("index.html");
     }
 

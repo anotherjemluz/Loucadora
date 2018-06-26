@@ -34,7 +34,12 @@ public class BancoResultsServlet extends HttpServlet {
         String bresultsgenero = request.getParameter("bresultsgenero");
         String bresultspreco = request.getParameter("bresultspreco");
         String bresultscc = request.getParameter("bresultscc");      
-        //chama o DAO
+        
+        // atualizar filme
+        Filme f = new Filme(id, bresultstitulo, bresultsgenero, bresultspreco);
+        FilmeDAO fd = new FilmeDAO();
+        fd.atualizar();
+
         response.sendRedirect("index.html");
         }
     }

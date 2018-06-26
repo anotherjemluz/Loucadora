@@ -31,7 +31,18 @@ public class FuncionarioBuscarFilmeServlet extends HttpServlet {
             throws ServletException, IOException {
         String fsearchcpf = request.getParameter("fsearchcpf");
         String fsearchnome = request.getParameter("fsearchnome");
-        //chama o DAO
+        //buscar filme pelo funcionario 
+
+        FuncionarioDAO ad = new FuncionarioDAO();
+
+        if(alsearchcpf != null) {
+            a = ad.getFuncionarioByCPF(alsearchcpf);
+        } else if(alsearchcliente != null) {
+            List<Funcionario> c = new Arraylist<Funcionario>();
+            FuncionarioDAO cd = new FuncionarioDAO();
+            c = cd.getFuncionarioByNome(alsearchcliente);
+        }
+
         response.sendRedirect("fresults.html");
         }
     }

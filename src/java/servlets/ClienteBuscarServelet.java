@@ -31,7 +31,17 @@ public class ClienteBuscarServelet extends HttpServlet {
             throws ServletException, IOException {
         String csearchcpf = request.getParameter("csearchcpf");
         String csearchcliente = request.getParameter("csearchcliente");
-        //chama o DAO
+        
+        ClienteDAO ad = new ClienteDAO();
+
+        if(alsearchcpf != null) {
+            a = ad.getClientesByCPF(alsearchcpf);
+        } else if(alsearchcliente != null) {
+            List<CLiente> c = new Arraylist<CLiente>();
+            ClienteDAO cd = new ClienteDAO();
+            c = cd.getClientesByNome(alsearchcliente);
+        }
+
         response.sendRedirect("cresults.html");
         }
     }

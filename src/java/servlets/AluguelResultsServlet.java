@@ -34,7 +34,13 @@ public class AluguelResultsServlet extends HttpServlet {
         String aresultscliente = request.getParameter("aresultscliente");
         String aresultsdata1 = request.getParameter("aresultsdata1");
         String aresultsdata2 = request.getParameter("aresultsdata2");        
-        //chama o DAO
+        
+        // atualizar aluguel
+
+        Aluguel a3 = new Aluguel(id, aresultsdata1, aresultsdata2, cpf_funcionario, cpf_cliente);
+        a3.filmeDevolvido = aresultspago; // boolean qur indica se foi devolvido filme ou não
+        a.atualizar(a3);
+
         response.sendRedirect("aluguel.html");
         }
     }

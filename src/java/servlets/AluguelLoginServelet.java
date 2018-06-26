@@ -32,7 +32,18 @@ public class AluguelLoginServelet extends HttpServlet {
             throws ServletException, IOException {
         String allogincpf = request.getParameter("allogincpf");
         String alloginpass = request.getParameter("alloginpass");
-        //chama o dao
+
+        //Funcionario c = new Funcionario(ccadastronome, ccadastrocpf, ccadastronascimento);
+        Funcionario f = new Funcionario();
+        FuncionarioDAO fd = new FuncionarioDAO();
+        f = fd.getFuncionarioByCPF(allogincpf);
+
+        if(f.getSenha() == alloginpass) {
+            // redireciona pra tela q quer entrar
+        } else {
+            // mostrar uma mensagem de q usuario ou senha inválida
+        }
+
         response.sendRedirect("acadastro.html");
         }
     }

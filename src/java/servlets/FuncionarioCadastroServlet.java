@@ -34,7 +34,11 @@ public class FuncionarioCadastroServlet extends HttpServlet {
         String fcadastronascimento = request.getParameter("fcadastronascimento");
         String fcadastropass = request.getParameter("fcadastropass");
         String fcadastrogerente = request.getParameter("fcadastrogerente");
-        //chama o DAO
+        
+        Funcionario f = new Funcionario(fcadastronome, fcadastrocpf, fcadastronascimento, fcadastrogerente, fcadastropass);
+        FuncionarioDAO fd = new FuncionarioDAO();
+        fd.inserir(f);
+
         response.sendRedirect("func.html");
         }
     }
